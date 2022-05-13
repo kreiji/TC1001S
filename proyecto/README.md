@@ -1,9 +1,9 @@
 <h1>Proyecto TC1001S</h1>
 
 <h2>Equipo</h2>
-Maria Carelia Ibarra Vasquez A01251463
-Jesus Francisco Fong Ruiz A01254062
-Santiago Ramirez
+María Carelia Ibarra Vásquez A01251463
+Jesús Francisco Fong Ruíz A01254062
+Santiago Ramírez Enríquez A01254173
 
 <h2>Materia y Fecha</h2>
 Herramientas Computacionales: El Arte de la Programacion (Semana Tec) TC1001S.201
