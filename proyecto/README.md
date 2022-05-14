@@ -14,3 +14,6 @@ El codigo de "simonsays.py" fue conseguido desde la página de Free Python Games
 
 
 Hicimos tres cambios (uno por cada miembro del equipo). El primero es un contador que muestra el número de rondas, esto fue hecho escribiendo la longitud del patrón. El segundo cambio fue darle al juego la habilidad de cambiar los colores de los cuadros aleatoriamente, esto fue hecho creando dos arreglos (uno para los colores oscuros y otro para los colores brillantes) despues se crearon variables con un valor aleatorio del 0 a 8 (equivalente a las longitudes de los arreglos que contienen los colores) y por último añadimos los colores en los vectores correspondientes a los cuadros (indicados por el índice de los arreglos). Finalmente, el último cambio fue agregar sonido, importamos la librería playsound, descargamos algunos sonidos (los cuales pusimos dentro de los vectores para los cuadros como strings) y cuando un cuadro se selecciona el sonido suena en el juego.
+
+<h2>Video del Proyecto</h2>
+https://youtu.be/6FUuptgwcSU
