@@ -39,6 +39,7 @@ tiles = {
 
 def grid():
     """Draw grid of tiles."""
+    #Dibujar los 4 rectangulos con los colores seleccionados al inicio
     square(0, 0, 200, darkcolorarray[panel1color])
     square(0, -200, 200, darkcolorarray[panel2color])
     square(-200, 0, 200, darkcolorarray[panel3color])
@@ -51,13 +52,14 @@ def flash(tile):
 
     '''Declaramos glow al primer color en el vector, dark al segundo color, y sound a la string con el nombre del archivo'''
     glow, dark, sound = tiles[tile]
-    square(tile.x, tile.y, 200, glow)
+    square(tile.x, tile.y, 200, glow)  #Hace que brille el cuadrado
     update()
 
     '''Se toma sound y lo ponemos en la funcion playsound para poner el sonido'''
     playsound(sound)
     sleep(0.3)
-    square(tile.x, tile.y, 200, dark)
+    
+    square(tile.x, tile.y, 200, dark) #Hace que el cuadrado vuelva a estar oscuro
     update()
     sleep(0.3)
 
@@ -86,12 +88,18 @@ def tap(x, y):
     tile = vector(x, y)
     index = len(guesses) 
 
+    """Si el jugador presiona el cuadro incorrecto, sale un mensaje de game over, pasan 5 segundos y el juego se cierra"""
     if tile != pattern[index]:
+        writer.goto(-50, 0)
+        writer.write("GAME OVER", font=(200))
+        sleep(5)
         exit()
 
+    """Manda el cuadro seleccionado al array guesses y se manda a la funcion flash"""
     guesses.append(tile)
     flash(tile)
 
+    """Si el jugador selecciono los cuadros en el orden correcto, se llama a la funcion grow"""
     if len(guesses) == len(pattern):
         grow()
 
@@ -104,7 +112,8 @@ def start(x, y):
     onscreenclick(tap)
 
 
-setup(420, 500, 370, 0)
+setup(420, 500, 370, 0) 
+"""Crea la ventana con dimensiones de 420 x 500"""
 hideturtle()
 tracer(False)
 writer.goto(150, 220)
