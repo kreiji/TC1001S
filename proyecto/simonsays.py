@@ -58,7 +58,7 @@ def flash(tile):
     '''Se toma sound y lo ponemos en la funcion playsound para poner el sonido'''
     playsound(sound)
     sleep(0.3)
-    
+
     square(tile.x, tile.y, 200, dark) #Hace que el cuadrado vuelva a estar oscuro
     update()
     sleep(0.3)
@@ -92,7 +92,7 @@ def tap(x, y):
     if tile != pattern[index]:
         writer.goto(-50, 0)
         writer.write("GAME OVER", font=(200))
-        sleep(5)
+        sleep(3)
         exit()
 
     """Manda el cuadro seleccionado al array guesses y se manda a la funcion flash"""
