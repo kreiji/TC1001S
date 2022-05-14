@@ -15,6 +15,7 @@ def tap(x, y):
         ball.y = -199
         speed.x = (x + 250) / 25
         speed.y = (y + 250) / 25
+    """Se cambio la velocidad de 200 a 250"""
 
 
 def inside(xy):

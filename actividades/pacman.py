@@ -15,6 +15,9 @@ ghosts = [
     [vector(120, 160), vector (5, 0)],
     [vector(120, -160), vector(0, -5)],
 ]
+
+"""Se agregaron los ultimos dos vectores"""
+
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
@@ -74,6 +77,7 @@ def valid(point):
 
 def world():
     "Draw world using path."
+    """Se cambiaron los colores del tablero"""
     bgcolor('green')
     path.color('brown')
 

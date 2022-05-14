@@ -41,16 +41,19 @@ def tap(x, y):
     print(spot)
     print(xy(spot))
     mark = state['mark']
+    """Se escribe el numero de clicks hechos"""
     writer.write(state['taps'])
     # print(x, y)
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
+        """Se incrementa un click al contador"""
         state['taps'] += 1
     else:
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
+        """Se incrementa un click al contador"""
         state['taps'] += 1
 
 
@@ -71,8 +74,10 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
+        """ocupamos ir a x+25 para que el texto quede centrado"""
         goto(x + 25, y)
         color('black')
+        """Se alineao el texto en el centro"""
         write(tiles[mark], align='center', font=('Arial', 30, 'normal'))
 
     update()
